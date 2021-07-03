@@ -37,8 +37,8 @@ namespace TriangleTest
 
         }
 
-        [Test(Description = "This test case will check the triangle formed is an Isoceles triangle as it satisfy the the condition to form a triangle and having two same length sides")]
-        public void Checking_Isoceles_triangle()
+        [Test(Description = "This test case will check the triangle formed is an isosceles triangle as it satisfy the the condition to form a triangle and having two same length sides")]
+        public void Checking_Isosceles_triangle()
         {
             //ARRANGE
             double firstSide = 10.0, secondSide = 1, thirdSide = 10;
@@ -51,7 +51,7 @@ namespace TriangleTest
         }
         
      
-        [Test(Description = "This test case will check that the triangle form is equlateral on providing the same values for all three sides.")]
+        [Test(Description = "This test case will check that the triangle form is Equilateral on providing the same values for all three sides.")]
         public void Checking_Equilateral_triangle()
         {
             //ARRANGE
@@ -59,7 +59,7 @@ namespace TriangleTest
             //ACT
             TriangleSolver tri = new TriangleSolver(firstSide, secondSide, thirdSide);
             //ASSERT
-            Assert.AreEqual("Equilatral Triangle",tri.Analyze());
+            Assert.AreEqual("Equilateral Triangle", tri.Analyze());
 
         }
        
