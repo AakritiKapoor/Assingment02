@@ -18,7 +18,7 @@ namespace Assingment02
                 Console.WriteLine("1 = Enter Triangle dimensions");
                 Console.WriteLine("2 = Exit\n");
 
-                Console.WriteLine("Please select an option, by entering a number:");
+                Console.WriteLine("Please select an option, by entering a number: ");
                 userSelelction = Console.ReadLine();
                 if (userSelelction != "1" &&
                     userSelelction != "2")
@@ -39,7 +39,7 @@ namespace Assingment02
 
             while (isValid == false)
             {
-                Console.Write($"Please enter the length of {chosenLengthOfTriangle}:");
+                Console.Write($"Please enter the length of {chosenLengthOfTriangle}: ");
                 string userInput = Console.ReadLine();
                 Console.WriteLine();
 
@@ -75,7 +75,7 @@ namespace Assingment02
                 Console.WriteLine($"Entered sides of a triangle, first side: {firstSide}, second side: {secondSide} and third side: {thirdSide}.\n");
                 TriangleSolver triangleObject2 = new TriangleSolver(firstSide, secondSide, thirdSide);
                 triangleObj = triangleObject2;
-                Console.WriteLine(triangleObj.Analyze());
+                Console.WriteLine($"{triangleObj.Analyze()}\n");
                 selection = MenuOption();
             }
         }

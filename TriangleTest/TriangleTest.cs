@@ -37,7 +37,7 @@ namespace TriangleTest
 
         }
 
-        [Test(Description = "This test case will check the triangle formed is an isosceles triangle as it satisfy the the condition to form a triangle and having two same length sides")]
+        [Test(Description = "This test case will check the triangle formed is an Isosceles triangle as it satisfy the the condition to form a triangle and having two same length sides")]
         public void Checking_Isosceles_triangle()
         {
             //ARRANGE
@@ -86,7 +86,7 @@ namespace TriangleTest
             Assert.That(tri.Analyze(), Does.Contain("Does not from any triangle"));
 
         }
-        [Test(Description = "With the vlaues 6,10,4.1 the triangle formed is a Scalene triangle as it satisfies 6+10>4.1, 6+4.1>10 10+4.1> 6 . All three condition therfore the control goes to the else statment checking the type of triangle formed. This test case will check the Scalene triangle should be formed on providing the three different values as per the constrains.")]
+        [Test(Description = "With the values 6,10,4.1 the triangle formed is a Scalene triangle as it satisfies 6+10>4.1, 6+4.1>10 10+4.1> 6. All three condition therefore the control goes to the else statement checking the type of triangle formed. This test case will check the Scalene triangle should be formed on providing the three different values as per the constrains.")]
         public void Setting_length_Greater_than_differnece_between_two_sides()
         {
             //ARRANGE
@@ -97,7 +97,7 @@ namespace TriangleTest
             Assert.AreEqual("Scalene Triangle", tri.Analyze());
 
         }
-        [Test(Description = "As per the rule the firstside + secondSide > thirdSide and with the vlaues 6,10,16.1 the statment is not geting satified as 16 is not greater than 16.1. When the check is made in Analyze method the control falls into the if statment that states with this value triangle cannot be created.")]
+        [Test(Description = "As per the rule the firstside + secondSide > thirdSide and with the values 6,10,16.1 the statement is not getting satisfied as 16 is not greater than 16.1. When the check is made in Analyze method the control falls into the if statement that states with this value triangle cannot be created.")]
         public void Setting_length_greater_than_sum_of_two_sides()
         {
             //ARRANGE
@@ -108,7 +108,7 @@ namespace TriangleTest
             Assert.That(tri.Analyze(), Does.Contain("Does not from any triangle"));
 
         }
-        [Test(Description = "As per the rule firstSide + secondSide > thirdSide this means that it falls under the triangle inequality theorem. Niether the third side can be greater than 16 nor it can be equal to 16. On setting the values to 6,10,16 the triangle is analyzed as Invalid (satisfying If condition).This test case will check the triangle is not being formed when the third side is set equal to the sum of first and second side. That is 6 + 10 >16 condition is not satisfied.")]
+        [Test(Description = "As per the rule firstSide + secondSide > thirdSide this means that it falls under the triangle inequality theorem. Neither the third side can be greater than 16 nor it can be equal to 16. On setting the values to 6,10,16 the triangle is analyzed as Invalid (satisfying If condition). This test case will check the triangle is not being formed when the third side is set equal to the sum of first and second side. That is 6 + 10 >16 condition is not satisfied.")]
         public void Setting_length_equals_to_sum_of_two_sides()
         {
             //ARRANGE
@@ -119,7 +119,7 @@ namespace TriangleTest
             Assert.That(tri.Analyze(), Does.Contain("Does not from any triangle"));
 
         }
-        [Test(Description = "As per the rule firstSide + secondSide > thirdSide, the value set are 6,10,15.9 that means 6 + 10 > 15.9. If condition is not satiftied and the control moved to else statment stating the triangle formed is Scalene")]
+        [Test(Description = "As per the rule firstSide + secondSide > thirdSide, the value set are 6,10,15.9 that means 6 + 10 > 15.9. If condition is not satisfied and the control moved to else statement stating the triangle formed is Scalene")]
         public void Setting_length_lesser_than_sum_of_two_sides()
         {
             //ARRANGE
