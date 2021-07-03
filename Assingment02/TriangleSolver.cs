@@ -27,14 +27,22 @@ namespace Assingment02
         }
         public string Analyze()
         {
-            if(firstSide+secondSide<=thirdSide || firstSide+thirdSide<=secondSide || secondSide+thirdSide<=firstSide)
+            if (firstSide < 1 || secondSide < 1 || thirdSide < 1)
             {
-                return "Does not from any triangle";
+                throw new ArgumentOutOfRangeException("Invalid length to form triangle");
             }
-            else {
-                if (firstSide == secondSide && secondSide == thirdSide) { return "Equilatral Triangle"; }
-                else if (firstSide == secondSide || firstSide == thirdSide || secondSide == thirdSide) { return "Isosceles Triangle "; }
-                else { return "Scalene Triangle"; }
+            else
+            {
+                if (firstSide + secondSide <= thirdSide || firstSide + thirdSide <= secondSide || secondSide + thirdSide <= firstSide)
+                {
+                    return "Does not from any triangle";
+                }
+                else
+                {
+                    if (firstSide == secondSide && secondSide == thirdSide) { return "Equilatral Triangle"; }
+                    else if (firstSide == secondSide || firstSide == thirdSide || secondSide == thirdSide) { return "Isosceles Triangle"; }
+                    else { return "Scalene Triangle"; }
+                }
             }
         }
     }
