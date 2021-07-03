@@ -39,7 +39,7 @@ namespace Assingment02
 
             while (isValid == false)
             {
-                Console.WriteLine($"Please enter the {chosenLengthOfTriangle}:");
+                Console.Write($"Please enter the length of {chosenLengthOfTriangle}:");
                 string userInput = Console.ReadLine();
                 Console.WriteLine();
 
@@ -69,10 +69,10 @@ namespace Assingment02
 
             while (selection != 2)
             {
-                firstSide = ValidateUserInput("First side");
-                secondSide = ValidateUserInput("Second side");
-                thirdSide = ValidateUserInput("Third side");
-                Console.WriteLine($"Entered dimentions for first side: {firstSide}, second side: {secondSide} and third side: {thirdSide}.\n");
+                firstSide = ValidateUserInput("first side");
+                secondSide = ValidateUserInput("second side");
+                thirdSide = ValidateUserInput("third side");
+                Console.WriteLine($"Entered sides of a triangle, first side: {firstSide}, second side: {secondSide} and third side: {thirdSide}.\n");
                 TriangleSolver triangleObject2 = new TriangleSolver(firstSide, secondSide, thirdSide);
                 triangleObj = triangleObject2;
                 Console.WriteLine(triangleObj.Analyze());
