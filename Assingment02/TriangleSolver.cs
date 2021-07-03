@@ -39,7 +39,7 @@ namespace Assingment02
                 }
                 else
                 {
-                    if (firstSide == secondSide && secondSide == thirdSide) { return "Equilatral Triangle"; }
+                    if (firstSide == secondSide && secondSide == thirdSide) { return "Equilateral Triangle"; }
                     else if (firstSide == secondSide || firstSide == thirdSide || secondSide == thirdSide) { return "Isosceles Triangle"; }
                     else { return "Scalene Triangle"; }
                 }
