@@ -35,7 +35,7 @@ namespace Assingment02
             {
                 if (firstSide + secondSide <= thirdSide || firstSide + thirdSide <= secondSide || secondSide + thirdSide <= firstSide)
                 {
-                    return "Does not from any triangle";
+                    return "Does not form any triangle";
                 }
                 else
                 {

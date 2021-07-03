@@ -41,19 +41,19 @@ namespace Assingment02
             {
                 Console.Write($"Please enter the length of {chosenLengthOfTriangle}: ");
                 string userInput = Console.ReadLine();
-                Console.WriteLine();
+                //Console.WriteLine();
 
                 bool result = double.TryParse(userInput, out aNumber);
 
                 if (result == false || aNumber < 1)
                 {
-                    Console.WriteLine("That's not a valid input please,  try again.\n");
+                    Console.WriteLine("That's not a valid input please, try again.\n");
                 }
 
                 else
                 {
                     isValid = true;
-                    Console.WriteLine($"Current {chosenLengthOfTriangle} has been set to: {aNumber}.\n");
+                    Console.WriteLine($"Triangle {chosenLengthOfTriangle} has been set to: {aNumber}.\n");
                 }
             }
 
@@ -72,10 +72,10 @@ namespace Assingment02
                 firstSide = ValidateUserInput("first side");
                 secondSide = ValidateUserInput("second side");
                 thirdSide = ValidateUserInput("third side");
-                Console.WriteLine($"Entered sides of a triangle, first side: {firstSide}, second side: {secondSide} and third side: {thirdSide}.\n");
+                Console.WriteLine($"Entered sides of a triangle are:\nFirst side: {firstSide}\nSecond side: {secondSide}\nThird side: {thirdSide}.");
                 TriangleSolver triangleObject2 = new TriangleSolver(firstSide, secondSide, thirdSide);
                 triangleObj = triangleObject2;
-                Console.WriteLine($"{triangleObj.Analyze()}\n");
+                Console.WriteLine($"Result : {triangleObj.Analyze()}\n");
                 selection = MenuOption();
             }
         }
